@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -74,3 +73,52 @@ main {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job-1 job-2 job-3";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid $secondary-color;
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.job-1 {
+  grid-area: job-1;
+}
+
+.job-2 {
+  grid-area: job-2;
+}
+
+.job-3 {
+  grid-area: job-3;
+}
+
+.job {
+  background: lighten($primary-color, 5);
+  padding: 1rem;
+  border-bottom: 5px solid $secondary-color;
+}
+
+#main-footer {
+  text-align: center;
+  background: darken($primary-color, 10);
+  $color: set-text-color($primary-color);
+  padding: 1rem;
+  height: 60px;
+}
+
+@import "mobile";
